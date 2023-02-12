@@ -15501,7 +15501,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])):</span>
     <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'^[^\s]*'</span><span class="p">,</span> <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything before first space</span>
     <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15591,7 +15591,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])):</span>
     <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'[^\s]*$'</span><span class="p">,</span> <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything from last space to end</span>
     <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15679,7 +15679,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#we concatenate first and last names as follows:</span>
 <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'FLName'</span><span class="p">]</span><span class="o">=</span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">]</span><span class="o">+</span><span class="s1">' '</span><span class="o">+</span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">]</span>
 <span class="c1">#For comparison with the pre-made FL Name column here:</span>
-<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'FLName'</span><span class="p">,]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansUS</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'FLName'</span><span class="p">,]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15776,7 +15776,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ManagersUS</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ManagersUS</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -15846,16 +15846,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <th>27</th>
       <td>Carl Icahn</td>
       <td>Carl Icahn</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>Rex Tillerson</td>
-      <td>Rex Wayne Tillerson</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>Hillary Clinton</td>
-      <td>Hillary Rodham Clinton</td>
     </tr>
   </tbody>
 </table>
@@ -16195,7 +16185,7 @@ Name: date_of_birth, dtype: int64</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ManagersUS</span><span class="o">.</span><span class="n">date_of_birth</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ManagersUS</span><span class="o">.</span><span class="n">date_of_birth</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -16224,8 +16214,6 @@ Name: date_of_birth, dtype: int64</pre>
 25   1946-06-14
 26   1977-12-31
 27          NaT
-28   1952-03-23
-29          NaT
 Name: date_of_birth, dtype: datetime64[ns]</pre>
 </div>
 
@@ -16316,7 +16304,7 @@ Name: date_of_birth, dtype: int64</pre>
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">ManagersUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">=</span><span class="n">ManagersUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
 <span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">=</span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
-<span class="n">ManagersUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ManagersUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -16345,8 +16333,6 @@ Name: date_of_birth, dtype: int64</pre>
 25    1946-06-14
 26    1977-12-31
 27           NaT
-28    1952-03-23
-29           NaT
 Name: date_of_birth, dtype: object</pre>
 </div>
 
@@ -16364,7 +16350,7 @@ Name: date_of_birth, dtype: object</pre>
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">PoliticiansUS</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17905,7 +17891,7 @@ First of all, the Spanish language rules include what in English are special cha
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">])):</span>
     <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'^[^\s]*'</span><span class="p">,</span> <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything before first space</span>
     <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
 <span class="c1">#We will do the same here without showing results for managers.</span>
 
@@ -17914,7 +17900,7 @@ First of all, the Spanish language rules include what in English are special cha
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">])):</span>
     <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'^[^\s]*'</span><span class="p">,</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything before first space</span>
     <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">ManagersES</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ManagersES</span><span class="p">[[</span><span class="s1">'FName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -17985,16 +17971,6 @@ First of all, the Spanish language rules include what in English are special cha
       <td>maria</td>
       <td>María Luisa Martín González</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>maria</td>
-      <td>María Guadalupe Martín González</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>santiago</td>
-      <td>Santiago Abascal Conde</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -18019,14 +17995,14 @@ First of all, the Spanish language rules include what in English are special cha
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">])):</span>
     <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'[^\s]*$'</span><span class="p">,</span> <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything from last space to end</span>
     <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">PoliticiansES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
 <span class="c1">#We will do the same here without showing results for managers.</span>
 <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">])):</span>
     <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s1">'[^\s]*$'</span><span class="p">,</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FullName'</span><span class="p">][</span><span class="n">i</span><span class="p">])</span> <span class="c1"># capture everything from last space to end</span>
     <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>  
-<span class="n">ManagersES</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ManagersES</span><span class="p">[[</span><span class="s1">'LName'</span><span class="p">,</span><span class="s1">'full_name'</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -18097,16 +18073,6 @@ First of all, the Spanish language rules include what in English are special cha
       <td>gonzalez</td>
       <td>María Luisa Martín González</td>
     </tr>
-    <tr>
-      <th>5</th>
-      <td>gonzalez</td>
-      <td>María Guadalupe Martín González</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>conde</td>
-      <td>Santiago Abascal Conde</td>
-    </tr>
   </tbody>
 </table>
 </div>
@@ -18131,7 +18097,7 @@ First of all, the Spanish language rules include what in English are special cha
 <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FL_newName'</span><span class="p">]</span><span class="o">=</span><span class="n">ManagersES</span><span class="p">[</span><span class="s1">'FName'</span><span class="p">]</span><span class="o">+</span><span class="s1">' '</span><span class="o">+</span><span class="n">ManagersES</span><span class="p">[</span><span class="s1">'LName'</span><span class="p">]</span>
 
 <span class="c1">#For comparison with the pre-made FL Name column here:</span>
-<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'FL_newName'</span><span class="p">,]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">PoliticiansES</span><span class="p">[[</span><span class="s1">'FL_name'</span><span class="p">,</span><span class="s1">'FL_newName'</span><span class="p">,]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
      </div>
@@ -19714,7 +19680,7 @@ Name: date_of_birth, dtype: object</pre>
 <span class="c1"># replace date with "+" if year == 1800</span>
 <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ManagersES</span><span class="p">[</span><span class="s1">'date_of_birth'</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'1800-01-01'</span><span class="p">,</span> <span class="s1">'+'</span><span class="p">)</span> <span class="c1"># replace missing with + to avoid matching missing strings later</span>
 
-<span class="c1">#ManagersES[['year_of_birth', 'date_of_birth']].head(10)</span>
+<span class="c1">#ManagersES[['year_of_birth', 'date_of_birth']].head()</span>
 </pre></div>
 
      </div>
@@ -21398,7 +21364,7 @@ matrix object, and keep them for verification and validation, with potential aut
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SELFTIMED: 0.0005211830139160156
+<pre>SELFTIMED: 0.00133514404296875
 </pre>
 </div>
 </div>
@@ -21812,7 +21778,7 @@ matrix object, and keep them for verification and validation, with potential aut
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SELFTIMED: 0.0004010200500488281
+<pre>SELFTIMED: 0.0014300346374511719
 </pre>
 </div>
 </div>
@@ -22481,7 +22447,7 @@ matrix object, and keep them for verification and validation, with potential aut
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SELFTIMED: 0.0003993511199951172
+<pre>SELFTIMED: 0.0004317760467529297
 </pre>
 </div>
 </div>
@@ -22786,8 +22752,8 @@ matrix object, and keep them for verification and validation, with potential aut
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf_idf_matrix_Man</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])</span>
-<span class="n">tf_idf_matrix_Pol</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf_idf_matrix_Man</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'FL_name'</span><span class="p">])</span>
+<span class="n">tf_idf_matrix_Pol</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'FL_name'</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -22828,7 +22794,7 @@ matrix object, and keep them for verification and validation, with potential aut
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>SELFTIMED: 0.0007030963897705078
+<pre>SELFTIMED: 0.0005528926849365234
 </pre>
 </div>
 </div>
@@ -22845,7 +22811,7 @@ matrix object, and keep them for verification and validation, with potential aut
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matches_df3gram</span> <span class="o">=</span> <span class="n">get_matches_df</span><span class="p">(</span><span class="n">matches</span><span class="p">,</span> <span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">],</span> <span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">],</span> <span class="n">top</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">matches_df3gram</span> <span class="o">=</span> <span class="n">get_matches_df</span><span class="p">(</span><span class="n">matches</span><span class="p">,</span> <span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'FL_name'</span><span class="p">],</span> <span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'FL_name'</span><span class="p">],</span> <span class="n">top</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -22884,27 +22850,40 @@ matrix object, and keep them for verification and validation, with potential aut
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>                           Politician                         Managers  \
-0         andrey anatolyevich gordeev     andriy anatoliyovich gordeev   
-1           nestor ivanovych shufrych        nestor ivanovych shufrich   
-2       oksana anatoliivna korchynska     andriy anatoliyovich gordeev   
-3  volodymyr oleksandrovych zelenskyy  volodymyr hryhorovych zelenskyi   
-4  svitlana mykhailivna wojciechowska     andriy anatoliyovich gordeev   
-5              roman vasylovych shpek           roman vasylovych shpek   
-
-   Similarity  
-0    0.747188  
-1    0.917014  
-2    0.431192  
-3    0.785481  
-4    0.215596  
-5    1.000000  
+<pre>            Politician             Managers  Similarity
+0       andrey gordeev       andriy gordeev    0.870635
+1      nestor shufrych      nestor shufrich    0.866025
+2    oksana korchynska  volodymyr zelenskyi    0.250000
+3  volodymyr zelenskyy  volodymyr zelenskyi    0.968246
+4          roman shpek          roman shpek    1.000000
 </pre>
 </div>
 </div>
 
 </div>
 
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tf_idf_matrix_Man</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])</span>
+<span class="n">tf_idf_matrix_Pol</span> <span class="o">=</span> <span class="n">vectorizer3</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">])</span>
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="n">matches</span> <span class="o">=</span> <span class="n">cosinesimilarity</span><span class="p">(</span><span class="n">tf_idf_matrix_Pol</span><span class="p">,</span> <span class="n">tf_idf_matrix_Man</span><span class="o">.</span><span class="n">transpose</span><span class="p">(),</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span><span class="o">-</span><span class="n">t1</span>
+<span class="c1">#print("SELFTIMED:", t)</span>
+<span class="n">matches_df3gram</span> <span class="o">=</span> <span class="n">get_matches_df</span><span class="p">(</span><span class="n">matches</span><span class="p">,</span> <span class="n">PoliticiansUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">],</span> <span class="n">ManagersUA</span><span class="p">[</span><span class="s1">'full_name'</span><span class="p">],</span> <span class="n">top</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
